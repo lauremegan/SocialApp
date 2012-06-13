@@ -1,0 +1,2 @@
+$("#new_comment")[0].reset()
+$("#comments").prepend("<%= escape_javascript(@comment.body) %>");
