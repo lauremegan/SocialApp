@@ -20,6 +20,12 @@ class UsersController < ApplicationController
       format.json { render :json => @user }
     end
   end
+  
+  def new_avatar
+    #@user = User.find(params[:id])
+    @uploader = User.new.avatar
+    @uploader.success_action_redirect = new_user_url
+  end
 
   # GET /users/new
   # GET /users/new.json

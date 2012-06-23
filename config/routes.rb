@@ -14,8 +14,9 @@ SocialApp::Application.routes.draw do
 resources :videos do
 
 end
-  resources :users
 
+  match "users/new_avatar" => 'users#new_avatar', :as => :new_avatar
+  resources :users
   get "welcome/home"
   get "welcome/Blog"
   get "welcome/Image"

@@ -12,8 +12,6 @@
   <% end %>
 
   <div class="field">
-  
-    <%= f.hidden_field :key %>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
