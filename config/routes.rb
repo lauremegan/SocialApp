@@ -6,6 +6,12 @@ SocialApp::Application.routes.draw do
 		
   resources :comments
   
+  resources :images
+  
+  
+  
+  
+  
  
   
   #end
