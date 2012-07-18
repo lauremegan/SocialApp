@@ -13,7 +13,6 @@ end
 
 gem 'carrierwave_direct'
 
-
 gem 'json'
 
 # Gems used only for assets and not required

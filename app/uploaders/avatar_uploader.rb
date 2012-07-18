@@ -4,7 +4,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
    # include CarrierWave::MiniMagick
-  include CarrierWave::RMagick
+ # include CarrierWave::RMagick
  
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -20,7 +20,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # This is a sensible default for uploaders that are meant to be mounted: 
   def store_dir
     #"uploads/#{model.class.to_s.underscore}/#{mounted_as}//" 
-     "uploads/#{model.class.to_s.underscore}/#{model.id}"
+     "uploads/#{model.class.to_s.underscore}//"
   end
   
   def root
