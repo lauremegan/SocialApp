@@ -36,43 +36,25 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
   end
-  # here i am gone edit the create part
+
   # POST /articles
   # POST /articles.json
- # def create
-   # @article = Article.new(params[:article])
-
-   # respond_to do |format|
-   #  if @article.save
-       # format.html { redirect_to @article, :notice => 'Article was successfully created.' }
-       # format.json { render :json => @article, :status => :created, :location => @article }
-     # else
-       # format.html { render :action => "new" }
-       # format.json { render :json => @article.errors, :status => :unprocessable_entity }
-     # end
-  #  end
-  # end
-  
   def create
-  @article = Article.find(params[:article_id])
-    @comment = @article.comments.build(params[:comment])
+    @article = Article.new(params[:article])
+
     respond_to do |format|
-      if @comment.save
-        format.html { redirect_to(@article, :notice => 'Comment was successfully created.') }
-        format.xml  { render :xml => @article, :status => :created, :location => @article }
+      if @article.save
+        format.html { redirect_to @article, :notice => 'Article was successfully created.' }
+        format.json { render :json => @article, :status => :created, :location => @article }
       else
-        format.html { redirect_to(@article, :notice => 
-        'Comment could not be saved. Please fill in all fields')}
-        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @article.errors, :status => :unprocessable_entity }
       end
     end
   end
-  
-  
 
   # PUT /articles/1
   # PUT /articles/1.json
-  
   def update
     @article = Article.find(params[:id])
 

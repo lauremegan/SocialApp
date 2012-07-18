@@ -1,24 +1,19 @@
 SocialApp::Application.routes.draw do
   
-	resources :articles 
+  resources :articles
+
+  resources :videos
 		
-	  resources :comments
+  resources :comments
   
+ 
   
-
-  # i had to change the resource :video to resource : video do
-  #error printed is:
- # rake aborted!
-#/home/laurence/rails/SocialApp/config/routes.rb:72: syntax error, unexpected $end, expecting kEND
-
-resources :videos do
-
-end
+  #end
+  
 
   match "users/new_avatar" => 'users#new_avatar', :as => :new_avatar
   resources :users
   get "welcome/home"
-  get "welcome/Blog"
   get "welcome/Image"
   get "welcome/KidsStaff"
   get "welcome/videos"

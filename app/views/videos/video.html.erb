@@ -1,0 +1,12 @@
+<p>
+  <b>Title:</b>
+  <%= video.title %>
+</p>
+<p>
+  <b>Body:</b>
+  <%= video.body %>
+</p>
+
+<%= link_to 'Show', videos %>
+<%= link_to 'Edit', edit_videos_path(videos) %>
+<%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %>

@@ -5,6 +5,9 @@ class CreateVideos < ActiveRecord::Migration
    #t.string :title (edit the file)
    #t.text :embed_code (editing to:t.text :body
 
+   t.string :title
+   t.text :embed_code
+   
       t.text :body
       t.references :video
       

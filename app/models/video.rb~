@@ -1,5 +1,6 @@
 class Video < ActiveRecord::Base
   has_many :comments
+  attr_accessible :title, :embed_code
   
   validates :title, :embed_code, :presence => true
   validate :must_have_valid_embed_code
