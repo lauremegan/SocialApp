@@ -1,12 +1,13 @@
 SocialApp::Application.routes.draw do
   
-  resources :articles
+  resources :articles do
+  resources :comments
+end
 
   resources :videos
 		
-  resources :comments
+ 
   
-  resources :images
   
   
   
@@ -16,7 +17,9 @@ SocialApp::Application.routes.draw do
   
   #end
   
-
+  match "images/new_upload" => 'images#new_upload', :as => :new_upload
+  resources :images
+  
   match "users/new_avatar" => 'users#new_avatar', :as => :new_avatar
   resources :users
   get "welcome/home"

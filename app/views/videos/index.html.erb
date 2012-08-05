@@ -12,7 +12,7 @@
 <% @videos.each do |video| %>
   <tr>
     <td><%= video.title %></td>
-    <td><%# video.embed_code %>
+    <td><%# video.embed_code %></td>
     <p>
   <b>Embed code:</b>
   <%= sanitize_embed_code video %>

@@ -21,7 +21,7 @@ class ImagesController < ApplicationController
     end
   end
   
-  def new_image
+  def new_upload
     @uploader = Image.new.image
     @uploader.success_action_redirect = new_image_url
   end
