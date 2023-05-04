@@ -33,7 +33,7 @@ gem 'coffee-rails', ' 3.2.2'
 end
 
 #gem 'jquery-rails'
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails', '3.1.5'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
